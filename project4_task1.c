@@ -40,9 +40,8 @@ void round_result(int *board, int n) {
     int round_count = starting_player_key;
     int john = 0, marjorie = 0;
     int selection;
-    int *p; //pointer used for the for loop
 
-    for(p = board; p < board + n; p++) {
+    while(start_offset <= n - end_offset) {
         //this compares board[start_offset] with board[n - end_offset] using pointers
         //this will compare board[0] with board[n-1] on the first iteration
         if(*(board + start_offset) > *(board + n - end_offset)) {
